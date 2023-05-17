@@ -6,10 +6,14 @@ from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 
 from .user import urlpatterns as user_urls
+from .auditorim import urlpatterns as auditorium_urls
+from .order import urlpatterns as order_urls
 
 
 _urlpatterns = [
     path('user/', include(user_urls)),
+    path('auditorium/', include(auditorium_urls)),
+    path('order/', include(order_urls)),
 ]
 
 
