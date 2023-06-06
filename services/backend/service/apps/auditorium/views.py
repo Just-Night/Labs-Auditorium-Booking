@@ -37,7 +37,7 @@ class AuditoriumDestroy(generics.DestroyAPIView):
     permission_classes = [IsAdmin, permissions.IsAuthenticated]
 
 
-class OrderCreate(generics.RetrieveUpdateDestroyAPIView):
+class OrderCreate(generics.CreateAPIView):
     serializer_class = OrderSerializer
     permission_classes = [permissions.IsAuthenticated]
     queryset = Order.objects.all()
